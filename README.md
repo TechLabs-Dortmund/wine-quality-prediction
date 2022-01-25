@@ -53,6 +53,6 @@ function App() {
 
 - [@bob](https://www.github.com/bob)
 - [@alice](https://www.github.com/alice)
-
+- [@pauline] (https://www.github.com/paulinemilia) 
   
 
