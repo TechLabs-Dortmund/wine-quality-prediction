@@ -5,16 +5,16 @@ You can of course use this file to manage your project, e.g. as a place to keep 
 **Hint:** The following file is written in `markdown` which is a language to format text with simple characters. If you are unsure on how to use markdown then have a look at [this guide](https://www.markdownguide.org/basic-syntax/)
 
 By the end you should have filled out the following:
-1. **Project Title:** The title of the project, including a description which states the motivation/problem of the project and the developed solution.
+1. **Project title** 
 2. **How to Setup and Run:** The respective commands to install and run the project
 3. **Examples:** A brief overview on how to use the main functionalities of your project (does not have to be code)
 4. **Roadmap:** The general outline of what you want to do in what order. Please keep this up to date, so that we can follow what you are and will be doing.
 5. **Authors:** Please add all of you and link your respective GitHub profile and other information if you want to. This part if completely up to you.
 6. If you are done filling out the information below, please **delete this TODO Section** to keep your project readme clean for other people to get to know more about your project.
 
-# Wine Quality Prediction
-
-Description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+# Vino Chance - find your perfect wine
+As there is a overwhelming selection of different wines at supermarkets, a lack of knowledge and different tastes of wines, vino chance helps selecting the right wine for the right occasion. 
+We help wine newcomers and enthusiasts with their selection, recommend the perfect wine fitting to their taste or depending on the dish they want to eat and help wine experts or those to-be to broaden their horizon. 
 
 
 ## How to Setup and Run
@@ -54,5 +54,6 @@ function App() {
 - [@bob](https://www.github.com/bob)
 - [@alice](https://www.github.com/alice)
 - @pauline (https://www.github.com/paulinemilia) 
+- @kathi (https://github.com/ihtaak)
   
 
