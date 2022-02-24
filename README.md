@@ -55,5 +55,6 @@ function App() {
 - [@alice](https://www.github.com/alice)
 - @pauline (https://www.github.com/paulinemilia) 
 - @kathi (https://github.com/ihtaak)
+- [@Anna](https://github.com/annoboe)
   
 
