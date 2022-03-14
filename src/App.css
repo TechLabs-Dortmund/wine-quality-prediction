@@ -2,25 +2,37 @@
 html {
   width: 100%;
   height: 100%;
-  font-family: 'Montserrat', sans-serif;
-  background-color: white;
+  font-family: 'Roboto';
+  background-color: #ffff;
 }
 
 .bg-myRed{
-  background-color: brown;
+  background-color: #5e2028;
 }
 
 h1{
-  font-size: 3rem;
-  color: #74132B;
-  text-align:center;
-}
-
-h2{
-  font-size: 2rem;
-  color: #474747;
+ 
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 117px;
+  color: white;
   text-align: center;
-}
+  }
+  
+  h2{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 42px;
+    color: white;
+    text-align: center;
+  }
+
+
+
 
 hr{
   border-color: #F05F44;
@@ -32,23 +44,3 @@ hr{
   height: 10rem;
 }
 
-.btn{
-  font-weight: 700;
-  border-radius: 300px;
-  text-transform: uppercase;
-}
-
-.btn-primary{
-  background-color: #F05F44;
-  border-color: #F05F44;
-}
-
-.btn-primary:hover{
-  background-color: #ee4b08;
-  border-color: #ee4b08;
-  border-width: 4px;
-}
-
-.btn-xl {
-  padding: 1rem 2rem;
-}

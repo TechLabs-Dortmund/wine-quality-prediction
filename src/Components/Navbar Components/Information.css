@@ -1,0 +1,33 @@
+.card1{
+    background-color:#5E2028 ;
+    margin-left: 10rem;
+    margin-right: 2rem;
+}
+
+.card2{
+    background-color:#BAA39A ;
+    margin-right: 2rem;
+}
+
+.card3{
+    background-color:#50855B ;
+    margin-right: 10rem;
+}
+
+.cardtext{
+    color: white;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+}
+.cardtitle{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    text-align: center;
+    color:white;
+}

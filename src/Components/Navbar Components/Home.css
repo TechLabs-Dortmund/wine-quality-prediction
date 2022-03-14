@@ -1,32 +1,52 @@
-.responsive {
-    display: left;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 700px;
-    height: 400px;
-    float: left;
+h1{
+ 
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 117px;
+  color: white;
+  text-align: center;
+  }
+  
+  h2{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 42px;
+    color: white;
+    text-align: center;
   }
 
 
+ .bg {
+  background-image: url("https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2luZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  } 
+
+
 .btn{
-    font-weight: 700;
-    border-radius: 300px;
+    font-weight: 400;
+    border-radius: 800px;
     text-transform: uppercase;
   }
   
   .btn-primary{
-    background-color: #F05F44;
-    border-color: #F05F44;
+    background-color: #5E2028;
+    border-color: #5E2028;
   }
   
   .btn-primary:hover{
-    background-color: #ee4b08;
-    border-color: #ee4b08;
+    background-color: #CCCCCC;
+    border-color: #CCCCCC;
     border-width: 4px;
   }
   
   .btn-xl {
-    padding: 1rem 2rem ;
+    padding: 0,5rem 2rem ;
   }
   

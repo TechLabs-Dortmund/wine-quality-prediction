@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Box = styled.div`
-padding: 80px 60px;
-background: #a52a2a;
-position: absolute;
+padding: 20px 30px;
+background: #DCE0E7;
+position: fixed;
 bottom: 0;
 width: 100%;
 ;
@@ -44,20 +44,27 @@ grid-gap: 20px;
 `;
 
 export const FooterLink = styled.a`
-color: #f5eeda;
+color:#ffff;
 margin-bottom: 20px;
 font-size: 18px;
 text-decoration: none;
 
 &:hover {
-	color: #ee4b08;
+	color: #5E2028;
 	transition: 200ms ease-in;
 }
 `;
 
 export const Heading = styled.p`
-font-size: 24px;
-color: #f5eeda;
-margin-bottom: 40px;
-font-weight: bold;
-`;
+font-size: 16px;
+color: #ffff;
+margin-top: 20px;
+margin-bottom: 20px;
+font-weight: light;
+
+&:hover {
+	color: #5E2028;
+	transition: 200ms ease-in;
+}
+`; 
+

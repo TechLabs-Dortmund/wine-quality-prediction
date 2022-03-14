@@ -2,8 +2,10 @@ import React from 'react';
 
 const Wine  = () => {
   return <div>
-    <h1>Was passt zu Deinem Wein?</h1>
-    <h2> Mache Deinen Weinabend perfekt</h2>
+    <br></br>
+    <h1 style={
+      { color: "#5E2028",
+      textAlign: "center"}}>Let's find the wine.</h1>
   </div>;
 };
 
