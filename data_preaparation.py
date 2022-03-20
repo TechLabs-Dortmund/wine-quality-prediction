@@ -80,6 +80,30 @@ variety_u_null = wine_data[wine_data['wine_categories'] == '0']
 variety_u_null_g = variety_u_null.groupby('variety')['variety'].count()
 v_sort = variety_u_null_g.sort_values(ascending = False)
 
+# price categories 
+price = wine_data.price
+price = price.sort_values(ascending = False)
+summe = price.sum()
+price = pd.DataFrame(price)
+price['perci'] = price/summe
+price['perci_c'] = price['perci'].cumsum()
+FFFF = price[price['perci_c'] <= 0.15]
+FFF = price[(price['perci_c'] > 0.15) & (price['perci_c'] <= 0.48)]
+FF = price[(price['perci_c'] > 0.48) & (price['perci_c'] <= 0.87)]
+F = price[price['perci_c'] > 0.87]
+
+conditions_price = [
+    (wine_data['price'] >= 101),
+    (wine_data['price'] < 101) & (wine_data['price'] >= 51),
+    (wine_data['price'] < 51) & (wine_data['price'] >= 21),
+    (wine_data['price'] < 21)
+    ]
+
+# price categories: 4 is most expensive 
+values_price = [4, 3, 2, 1]
+
+wine_data['price_cat'] = np.select(conditions_price, values_price)
+
 # food link
 conditions_food = [
     (wine_data['wine_categories'] == 'dry white wine'),
@@ -106,3 +130,5 @@ wine_data['food'] = np.select(conditions_food, values_food)
 
 wine_data_food = wine_data[wine_data['food'] != '0']
 wine_data_food = wine_data_food.reset_index(drop = True)
+
+wine_data_food_f = wine_data_food.drop(['description'], axis = 1)
