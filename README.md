@@ -45,6 +45,8 @@ function App() {
   
 ## Roadmap
 
+- Find and work on data set 
+- Decide on a design
 - Additional browser support
 - Add more integrations
 
