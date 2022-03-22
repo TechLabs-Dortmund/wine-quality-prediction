@@ -54,9 +54,6 @@ wine_data["rating"] = wine_data["points"].apply(cat_points)
 
 wine_data = wine_data.drop(['points'], axis = 1)
 
-wine_data = wine_data.dropna(subset=['region_1'])
-wine_data = wine_data.reset_index(drop = True)
-
 # assign different varieties to categories of wine
 conditions_wine = [
     (wine_data['variety'].str.contains('Sauvignon Blanc')) | (wine_data['variety'].str.contains('Pinot Grigio')) | (wine_data['variety'].str.contains('Albariño')) | (wine_data['variety'].str.contains('Pino Gris')),
@@ -87,20 +84,18 @@ summe = price.sum()
 price = pd.DataFrame(price)
 price['perci'] = price/summe
 price['perci_c'] = price['perci'].cumsum()
-FFFF = price[price['perci_c'] <= 0.15]
-FFF = price[(price['perci_c'] > 0.15) & (price['perci_c'] <= 0.48)]
-FF = price[(price['perci_c'] > 0.48) & (price['perci_c'] <= 0.87)]
+FFF = price[price['perci_c'] <= 0.15]
+FF = price[(price['perci_c'] > 0.15) & (price['perci_c'] <= 0.87)]
 F = price[price['perci_c'] > 0.87]
 
 conditions_price = [
     (wine_data['price'] >= 101),
-    (wine_data['price'] < 101) & (wine_data['price'] >= 51),
-    (wine_data['price'] < 51) & (wine_data['price'] >= 21),
+    (wine_data['price'] < 101) & (wine_data['price'] >= 21),
     (wine_data['price'] < 21)
     ]
 
 # price categories: 4 is most expensive 
-values_price = [4, 3, 2, 1]
+values_price = [3, 2, 1]
 
 wine_data['price_cat'] = np.select(conditions_price, values_price)
 
