@@ -1,62 +1,70 @@
-## TODO for the Techies
-Please **fill out the following information below**, as soon as possible. It is **required** to have this file completely filled out and up to date at the end of the project phase.
-You can of course use this file to manage your project, e.g. as a place to keep your todos and to plan your features. Also, feel free to edit this readme in any kind of way you like, but the required base layout and information should be consistent throughout all techie projects.
+# Getting Started with Create React App
 
-**Hint:** The following file is written in `markdown` which is a language to format text with simple characters. If you are unsure on how to use markdown then have a look at [this guide](https://www.markdownguide.org/basic-syntax/)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-By the end you should have filled out the following:
-1. **Project title** 
-2. **How to Setup and Run:** The respective commands to install and run the project
-3. **Examples:** A brief overview on how to use the main functionalities of your project (does not have to be code)
-4. **Roadmap:** The general outline of what you want to do in what order. Please keep this up to date, so that we can follow what you are and will be doing.
-5. **Authors:** Please add all of you and link your respective GitHub profile and other information if you want to. This part if completely up to you.
-6. If you are done filling out the information below, please **delete this TODO Section** to keep your project readme clean for other people to get to know more about your project.
+## Available Scripts
 
-# Vino Chance - find your perfect wine
-As there is a overwhelming selection of different wines at supermarkets, a lack of knowledge and different tastes of wines, vino chance helps selecting the right wine for the right occasion. 
-We help wine newcomers and enthusiasts with their selection, recommend the perfect wine fitting to their taste or depending on the dish they want to eat and help wine experts or those to-be to broaden their horizon. 
+In the project directory, you can run:
 
+### `npm start`
 
-## How to Setup and Run
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-In order to setup the project, please proceed as follows:
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-```bash
-  npm install my-project
-```
+### `npm test`
 
-After successful installation use the following command to run the project:
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-```bash
-  npm run
-```
-## Examples
+### `npm run build`
 
-You can see a brief overview of how to use the main functionality below
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-```javascript
-import Component from 'my-project'
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-function App() {
-  return <Component />
-}
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-  
-## Roadmap
+### `npm run eject`
 
-- Find and work on data set 
-- Decide on a design
-- Additional browser support
-- Add more integrations
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-  
-## Authors
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-- [@bob](https://www.github.com/bob)
-- [@alice](https://www.github.com/alice)
-- @pauline (https://www.github.com/paulinemilia) 
-- @kathi (https://github.com/ihtaak)
-- [@Anna](https://github.com/annoboe)
-  
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
