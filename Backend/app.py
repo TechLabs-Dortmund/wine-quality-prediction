@@ -4,13 +4,20 @@ import pandas as pd
  
 app = Flask(__name__)
 
-@app.route('/data')
-def f_data():
+@app.route('/alldata')
+def get_data():
     wine_data = pd.read_csv('data/wine_food_data.csv', low_memory=False)
-    result_c_p = wine_data.to_dict()
-    return result_c_p
+    result = wine_data.transpose().to_dict()
+    return result
 
-
+@app.route('/data')
+def get_dict():
+    return {
+        "wine_cat":"red", 
+        "country":"Germany",
+        "price_cat":"1", 
+        "rating":"2"
+        }
 
 
  
