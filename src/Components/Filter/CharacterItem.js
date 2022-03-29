@@ -11,13 +11,13 @@ const CharacterItem = ({item}) => {
         <h1>{item.wine_cat}</h1>
         <ul>
           <li>
-            <strong>Actor Name:</strong> {item.country}
+            <strong>Region:</strong> {item.country}
           </li>
           <li>
-            <strong>Nickname:</strong> {item.price_cat}
+            <strong>Price:</strong> {item.price_cat}
           </li>
           <li>
-            <strong>Birthday:</strong> {item.rating}
+            <strong>Rating</strong> {item.rating}
           </li>
         </ul>
       </div>

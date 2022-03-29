@@ -4,52 +4,8 @@ import CharacterGrid from '../Filter/CharacterGrid';
 import Search from '../Filter/Search';
 import './Wine.css';
 
-
-
-function Wine() {
-	
-	const [data, setData] = useState({})
-	const [items, setItems] = useState([])
-  	const [isLoading, setIsLoading] = useState(true)
-  	const [query, setQuery] = useState('')
-
-
-	
-	useEffect(() => {
-		
-		fetch("/data").then(
-			res => res.json()
-			).then(data => {
-					setData(data)
-					console.log(data)
-					
-    				setIsLoading(false)
-				}
-			)
-		
-	}, [])
-
-		return (
-			<div className="container">
-			  <br></br>
-			<h1 style={
-			  { color: "#5E2028",
-			  textAlign: "center"}}>Let's find the wine.</h1>
-		  
-		
-			  <Search getQuery={(q) => setQuery(q)} />
-			  <CharacterGrid isLoading = {isLoading} items={items}/>
-			</div>
-		  );
-		}
-
-export default Wine;
-
-
-
-
 /*
-const Wine = () => {
+const App = () => {
   const [items, setItems] = useState([])
   const [isLoading, setIsLoading] = useState(true)
   const [query, setQuery] = useState('')
@@ -58,7 +14,7 @@ useEffect(() => {
   const fetchItems = async () => {
     setIsLoading (true)
     const result = await axios(
-      `http://localhost:5000${query}`
+      `http://localhost:5000/alldata=${query}`
       ) 
 
     // console.log(result.data)
@@ -67,8 +23,28 @@ useEffect(() => {
   }
 
 fetchItems ()
-}, [query])
+}, [query])*/
 
+function Wine() {
+
+  const [data, setData] = useState({})
+	const [items, setItems] = useState([])
+  	const [isLoading, setIsLoading] = useState(true)
+  	const [query, setQuery] = useState('')
+
+useEffect(() => {
+		
+  fetch("http://localhost:5000/alldata").then(
+    res => res.json()
+    ).then(data => {
+        setData(data)
+        console.log(data)
+        
+          setIsLoading(false)
+      }
+    )
+  
+}, [])
 
   return (
     <div className="container">
@@ -77,11 +53,11 @@ fetchItems ()
       { color: "#5E2028",
       textAlign: "center"}}>Let's find the wine.</h1>
   
-
+/*
       <Search getQuery={(q) => setQuery(q)} />
-      <CharacterGrid isLoading = {isLoading} items={items}/>
+      <CharacterGrid isLoading = {isLoading} items={items}/> 
     </div>
   );
 }
 
-export default Wine;*/
+export default Wine;

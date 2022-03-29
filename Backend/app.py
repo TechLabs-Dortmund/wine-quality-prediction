@@ -1,8 +1,12 @@
 from flask import Flask, render_template, request, url_for, redirect
+from flask_cors import CORS
 from filter import f_country, filters, price_cat, wine_cat, origin
 import pandas as pd
+
+
  
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/alldata')
 def get_data():
@@ -10,6 +14,7 @@ def get_data():
     result = wine_data.transpose().to_dict()
     return result
 
+"""
 @app.route('/data')
 def get_dict():
     return {
@@ -102,3 +107,4 @@ def get_winecat(wine):
 if __name__ == '__main__':
     app.run(debug=True)
     
+"""
