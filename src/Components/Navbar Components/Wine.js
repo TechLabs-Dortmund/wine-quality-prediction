@@ -7,44 +7,41 @@ import './Wine.css';
 
 
 function Wine() {
-	// usestate for setting a javascript
-	// object for storing and using data
-	/*const [data, setdata] = useState({
-		wine_cat: "",
-		country: 0,
-		price_cat: "",
-		rating: "",
-	});
+	
+	const [data, setData] = useState({})
+	const [items, setItems] = useState([])
+  	const [isLoading, setIsLoading] = useState(true)
+  	const [query, setQuery] = useState('')
 
-	// Using useEffect for single rendering
+
+	
 	useEffect(() => {
-		// Using fetch to fetch the api from
-		// flask server it will be redirected to proxy
-		fetch("/Backend/data").then((res) =>
-			res.json().then((data) => {
-				// Setting a data from api
-				setdata({
-					wine_cat: data.wine_cat,
-					country: data.country,
-					price_cat: data.price_cat,
-					rating: data.rating,
-				});
-			})
-		);
-	}, []); */
+		
+		fetch("/data").then(
+			res => res.json()
+			).then(data => {
+					setData(data)
+					console.log(data)
+					
+    				setIsLoading(false)
+				}
+			)
+		
+	}, [])
 
-	return (
-		<div className="container">
-			
-				<h1>React and flask</h1>
-				
-			
-      	
-
-			
-		</div>
-	);
-}
+		return (
+			<div className="container">
+			  <br></br>
+			<h1 style={
+			  { color: "#5E2028",
+			  textAlign: "center"}}>Let's find the wine.</h1>
+		  
+		
+			  <Search getQuery={(q) => setQuery(q)} />
+			  <CharacterGrid isLoading = {isLoading} items={items}/>
+			</div>
+		  );
+		}
 
 export default Wine;
 
