@@ -1,15 +1,8 @@
 import pandas as pd
 import numpy as np
 
-wine_data = pd.read_csv('Data/wine_food_data.csv', low_memory=False)
+wine_data = pd.read_csv('Data/wine_food_data.csv')
 
-
-def f_country(country: str):
-    wine_data = pd.read_csv('data/wine_food_data.csv', low_memory=False)
-    selection_c = wine_data[wine_data['country'] == country]
-    result_c = selection_c[['country', 'title', 'price', 'rating']]
-    result_c_p = result_c.to_dict()
-    return result_c_p
 
 # filter wine categorie
 def wine_cat(wine = 'red'):
@@ -18,8 +11,7 @@ def wine_cat(wine = 'red'):
     return output_dict_c
 
 # filter origin 
-def origin(name):
-    wine_data = pd.read_csv('data/wine_food_data.csv', low_memory=False)
+def origin(name = 'national'):
     if name == 'europe':
         return wine_data[(wine_data['country'] == 'Spain') 
                          | (wine_data['country'] == 'Portugal') 
@@ -73,10 +65,9 @@ def price_cat(price = 1):
     result_p = result_p.transpose().to_dict()
     return result_p
 
-
-
 # filter together
-def filters(wine, origin):
+def filters(wine = 'red', origin = 'national', price = 1, food = 1):
+    wine_data = pd.read_csv('data/wine_food_data.csv')
     if wine in ['red', 'white', 'rosé']:
         wine_cat = wine_data[wine_data['wine_categories'].str.contains(wine)]
     else: 
@@ -129,5 +120,16 @@ def filters(wine, origin):
     else:
         wine_o = wine_cat
     
-    output = wine_o.transpose().to_dict()
+    if price in [1, 2, 3]:
+        wine_p = wine_o[wine_o['price_cat'] == price]
+    else: 
+        wine_p = wine_o
+
+    if food == 1:
+        wine_f = wine_p
+    else: 
+        wine_f = wine_p.drop('food', axis = 1)
+    
+    output = wine_f.transpose().to_dict()
     return output
+
