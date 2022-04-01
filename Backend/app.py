@@ -1,31 +1,38 @@
 from flask import Flask, render_template, request, url_for, redirect
-from flask_cors import CORS
-from filter import f_country, filters, price_cat, wine_cat, origin
+from filter import wine_cat, origin
 import pandas as pd
-
-
  
 app = Flask(__name__)
-CORS(app)
+
+@app.route("/data")
+def get_testdata():
+    return {
+            'country': 'US',
+            'price': 13.0,
+            'province': 'Michigan',
+            'region_1': 'Lake Michigan Shore',
+            'title': 'St. Julian 2013 Reserve Late Harvest Riesling (Lake Michigan Shore)',
+            'variety': 'Riesling',
+            'winery': 'St. Julian',
+            'rating': 2,
+            'wine_categories': 'sweet white wine',
+            'price_cat': 1,
+            'food': 'soft cheese, hard cheese, cured meat, sweets'
+    }
+
+@app.route('/testdata')
+def get_data():
+    data = pd.read_csv('data/wine_food_data.csv')
+    data = data.iloc[0]
+    return data.transpose().to_dict()
 
 @app.route('/alldata')
-def get_data():
-    wine_data = pd.read_csv('data/wine_food_data.csv', low_memory=False)
+def get_alldata():
+    wine_data = pd.read_csv('data/wine_food_data.csv')
     result = wine_data.transpose().to_dict()
     return result
 
 """
-@app.route('/data')
-def get_dict():
-    return {
-        "wine_cat":"red", 
-        "country":"Germany",
-        "price_cat":"1", 
-        "rating":"2"
-        }
-
-
- 
 @app.route('/')
 def home():
     return "hello"
@@ -42,30 +49,6 @@ def food():
 def information():
     return render_template('Frontend/src/Components/Navbar Components/Information.js')
 
-@app.route("/button", methods=["POST", "GET"])
-def button():
-    if request.method == "POST":
-        get_country = request.form["nm"]
-        return redirect(url_for("get_country", country=get_country))
-    else:
-	    return render_template('button.html')
-
-@app.route('/country/<country>')
-def get_country(country):
-    return f_country(country)
-
-@app.route("/filter", methods=["POST", "GET"])
-def filter():
-    if request.method == "POST":
-        get_filter = request.form["wine"]
-        get_filter = request.form["origin"]
-        return redirect(url_for("get_filter", wine = get_filter, origin = get_filter))
-    else:
-	    return render_template("winefilter.html")
-
-@app.route('/tro/<wine>/<origin>')
-def get_filter(wine, origin):
-    return filters(wine, origin)
 
 @app.route("/category", methods=["POST", "GET"])
 def category():
@@ -83,18 +66,6 @@ def where():
     else:
 	    return render_template('wine_cat.html')
 
-@app.route("/price", methods=["POST", "GET"])
-def price():
-    if request.method == "POST":
-        get_pricecat = request.form["nm"]
-        return redirect(url_for("get_pricecat", price=get_pricecat))
-    else:
-	    return render_template('price_cat.html')
-
-@app.route('/pricecat/<price>')
-def get_pricecat(price):
-    return price_cat(price)
-
 @app.route('/origin/<name>')
 def get_origin(name):
     return origin(name)
@@ -103,8 +74,7 @@ def get_origin(name):
 def get_winecat(wine):
     return wine_cat(wine)
 
-
+"""
 if __name__ == '__main__':
     app.run(debug=True)
     
-"""
