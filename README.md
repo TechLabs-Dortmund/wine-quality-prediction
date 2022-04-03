@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="https://github.com/TechLabs-Dortmund/wine-quality-prediction/blob/ux-design/design/Wine.png?raw=true" width="350" title="hover text">
+</p>
 
 # Vino Chance - find your perfect wine
 As there is a overwhelming selection of different wines at supermarkets, a lack of knowledge and different tastes of wines, vino chance helps selecting the right wine for the right occasion. 
