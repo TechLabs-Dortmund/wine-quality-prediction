@@ -42,6 +42,10 @@ function App() {
 
 Our full roadmap can be found on our [trelloboard](https://trello.com/b/xTmpwCmt/sprint-planning). 
 
+## UX-Design 
+
+You will find the Figma-Design for the Prototype and Wireframe [here]((https://www.figma.com/file/T3KvUyKeOfTDaO2BfhJeCN/Vino-Chance?node-id=0%3A1). You find further information on the design process on our [mural](https://app.mural.co/t/techlabsglobal7643/m/techlabsglobal7643/1642006139698/e96378074736f92c197cee7de931f3bfe0a83c8e?sender=uefb7a45f031abd7b381e2509).
+
   
 ## Authors
 
