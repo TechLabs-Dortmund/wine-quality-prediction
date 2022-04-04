@@ -40,7 +40,7 @@ function App() {
 - Additional browser support
 - Add more integrations
 
-Our full roadmap can be found on our [trelloboard](https://trello.com/b/xTmpwCmt/sprint-planning)
+Our full roadmap can be found on our [trelloboard](https://trello.com/b/xTmpwCmt/sprint-planning). 
 
   
 ## Authors
