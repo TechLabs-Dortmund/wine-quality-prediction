@@ -8,39 +8,6 @@ As there is a overwhelming selection of different wines at supermarkets, a lack 
 We help wine newcomers and enthusiasts with their selection, recommend the perfect wine fitting to their taste or depending on the dish they want to eat and help wine experts or those to-be to broaden their horizon. 
 
 
-## How to Setup and Run
-
-In order to setup the project, please proceed as follows:
-
-```bash
-  npm install my-project
-```
-
-After successful installation use the following command to run the project:
-
-```bash
-  npm run
-```
-## Examples
-
-You can see a brief overview of how to use the main functionality below
-
-```javascript
-import Component from 'my-project'
-
-function App() {
-  return <Component />
-}
-```
-
-  
-## Roadmap
-
-- Find and work on data set 
-- Decide on a design
-- Additional browser support
-- Add more integrations
-
   
 ## Authors
 
