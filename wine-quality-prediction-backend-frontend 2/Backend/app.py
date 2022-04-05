@@ -24,13 +24,13 @@ def get_testdata():
 
 @app.route('/testdata')
 def get_data():
-    data = pd.read_csv('data/wine_food_data.csv')
+    data = pd.read_csv('Data/wine_food_data.csv')
     data = data.iloc[0:3]
     return data.transpose().to_dict()
 
 @app.route('/alldata')
 def get_alldata():
-    wine_data = pd.read_csv('data/wine_food_data.csv')
+    wine_data = pd.read_csv('Data/wine_food_data.csv')
     result = wine_data.transpose().to_dict()
     return result
 
