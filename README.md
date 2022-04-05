@@ -9,36 +9,69 @@ We help wine newcomers and enthusiasts with their selection, recommend the perfe
 
 ## How to Setup and Run
 
-In order to setup the project, please proceed as follows:
+To get a local copy up and running, proceed as follows:
+
+First you need to navigate into the ```backend``` directory to set up a ```virtual environment```, ```activate``` it and ```install``` all necessary packages: 
 
 ```bash
-  npm install my-project
+  #windows
+  cd backend
+  python -m venv venv
+  venv/Scripts/activate
+  pip install -r requirements.txt
+```
+```bash
+  #macOS/Linux
+  cd backend
+  python3 -m venv venv
+  venv/bin/acitvate
+  pip3 install -r requirements.txt
 ```
 
-After successful installation use the following command to run the project:
+Now use the following command to run the ```backend```:
 
 ```bash
-  npm run
+  #windows
+  python app.py
 ```
-## Examples
-
-You can see a brief overview of how to use the main functionality below
-
-```javascript
-import Component from 'my-project'
-
-function App() {
-  return <Component />
-}
+```bash
+  #macOS/Linux
+  python3 app.py
 ```
+After successful installation and activation of the backend-part use the ```frontend``` directory to start the project:
 
-  
+```bash
+  cd frontend
+  npm install
+  npm start
+```
+(note that you need two different terminals: one for the backend and one for the frontend-application)
+
+# About the Project 
+
+## Built with
+
+- [ReactJs](https://reactjs.org/)
+- [Python](https://www.python.org/)
+- [Flask](https://flask.palletsprojects.com/en/2.1.x/)
+
+
 ## Roadmap
 
-- Find and work on data set 
-- Decide on a design
-- Additional browser support
-- Add more integrations
+- [x] find and clear suitable Dataset 
+- [x] decide on a design 
+- [x] built a wireframe
+- [x] connect wine to food
+- [x] write filters
+- [x] built website 
+- [x] built a backend structure
+- [x] connect backend and frontend
+- [x] implement a filter 
+- [ ] implement all filters
+- [ ] add QR-Code scanner
+- [ ] implement a food-to-wine-recommendation-system based on a machine learning approach
+
+  ...
 
 Our full roadmap can be found on our [trelloboard](https://trello.com/b/xTmpwCmt/sprint-planning). 
 
