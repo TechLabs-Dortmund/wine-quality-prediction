@@ -85,5 +85,4 @@ You will find the Figma-Design for the Prototype and Wireframe [here](https://ww
 - [@pauline](https://www.github.com/paulinemilia) 
 - [@kathi](https://github.com/ihtaak)
 - [@Anna](https://github.com/annoboe)
-  
-
+- [@Tayfun](https://github.com/Tay1995)
