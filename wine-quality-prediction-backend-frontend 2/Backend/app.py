@@ -35,40 +35,6 @@ def get_alldata():
     return result
 
 """
-@app.route('/')
-def home():
-    return "hello"
-
-@app.route('/wine') 
-def wine():
-    return render_template('./Frontend/src/Components/Navbar Components/Wine.js')
-
-@app.route('/food')
-def food():
-    return render_template('Frontend/src/Components/Navbar Components/Food.js')
-
-@app.route('/information')
-def information():
-    return render_template('Frontend/src/Components/Navbar Components/Information.js')
-
-
-@app.route("/category", methods=["POST", "GET"])
-def category():
-    if request.method == "POST":
-        get_winecat = request.form["nm"]
-        return redirect(url_for("get_winecat", wine=get_winecat))
-    else:
-	    return render_template('wine_cat.html')
-
-@app.route("/where", methods=["POST", "GET"])
-def where():
-    if request.method == "POST":
-        get_origin = request.form["nm"]
-        return redirect(url_for("get_origin", name=get_origin))
-    else:
-	    return render_template('wine_cat.html')
-
-
 
 @app.route('/winecat/<wine>')
 def get_winecat(wine):
