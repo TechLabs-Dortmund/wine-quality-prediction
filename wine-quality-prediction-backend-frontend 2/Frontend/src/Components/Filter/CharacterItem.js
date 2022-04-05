@@ -15,7 +15,7 @@ const CharacterItem = ({item}) => {
             <strong>Region:</strong> {item.country}
           </li>
           <li>
-            <strong>Price:</strong> {item.price_cat}
+            <strong>Price:</strong> {item.price}
           </li>
           <li>
             <strong>Rating:</strong> {item.rating}
