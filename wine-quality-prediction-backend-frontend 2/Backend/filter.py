@@ -1,7 +1,8 @@
 import pandas as pd
 import numpy as np
 
-wine_data = pd.read_csv('Data/wine_food_data.csv').dropna()
+wine_data = pd.read_csv('Data/wine_food_data.csv')
+wine_data = wine_data.drop('region_1', axis = 1)
 
 
 # filter wine categorie
@@ -68,7 +69,6 @@ def price_cat(price = 1):
 
 # filter together
 def filters(wine = 'red', origin = 'national', price = 1, food = 1):
-    wine_data = pd.read_csv('data/wine_food_data.csv')
     if wine in ['red', 'white', 'rosé']:
         wine_cat = wine_data[wine_data['wine_categories'].str.contains(wine)]
     else: 
